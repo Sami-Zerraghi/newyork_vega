@@ -20,6 +20,13 @@
 
 
 //   Chargerment  des variables d'environnement
-     $envFile = parse_ini_file(ROOT."/env.conf");
+    require __DIR__ . "/dotenv.php";
 
-    var_dump($envFile);
+    // Chargement la configuration systéme
+    require __DIR__ ."/system.php";
+
+    // Chargement la configuration session
+    require __DIR__ ."/session.php";
+
+    // Chargement du monolog
+    require __DIR__ ."/monolog.php";
